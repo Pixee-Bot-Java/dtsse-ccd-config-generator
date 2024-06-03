@@ -138,7 +138,7 @@ class AuthorisationCaseFieldGenerator<T, S, R extends HasRole> implements Config
       Map<String, Set<Permission>> rolePermissions = fieldRolePermissions.column(role);
 
       for (Entry<String, Set<Permission>> fieldPerm : rolePermissions.entrySet()) {
-        if (fieldPerm.getKey().equals("[STATE]")) {
+        if ("[STATE]".equals(fieldPerm.getKey())) {
           continue;
         }
 

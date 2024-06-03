@@ -163,7 +163,7 @@ public class JsonUtils {
 
     @Override
     public Object merge(String key, Object existing, Object generated) {
-      if (!key.equals("CRUD")) {
+      if (!"CRUD".equals(key)) {
         return existing;
       }
       String existingPermissions = existing.toString() + generated.toString();
